@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carpool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+
+
+<div class="layout">
+  <header>
+    <img src="img/carpool_topbanner.jpg" width="100%">
+  </header>
+  <nav>
+    <ul class="nav-left">
+      <li><a href="book.html">Book</a></li>
+      <li><a href="trips.html">View trips</a></li>
+    </ul>
+
+    <ul></ul>
+
+    <ul >
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+
+    <form id="ride-form" method="post">
+
+      <h1>Carpool</h1>
+
+    <div>Vælg dato <input type="date"/></div>
+
+    <fieldset>
+
+      <h3>Er du chauffør eller passager?</h3>
+
+      <div id="type-radio">
+        <input id="passager" type="radio" name="type" value="passager"/>
+        <label for="passager">Passager</label>
+      </div>
+      <div>
+        <input id="chauffør" type="radio" name="type" value="chauffør"/>
+        <label  for="chauffør">Chauffør</label>
+      </div>
+    </fieldset>
+
+    <div id="fra-til-select">
+      <div>
+      <label for="fra">Fra</label>
+      <select id="fra" name="fra">
+        <option value="Hasle">Hasle</option>
+        <option value="Gudhjem">Gudhjem</option>
+        <option value="Nexø">Nexø</option>
+      </select>
+      </div>
+
+      <div>
+      <label for="til">Til</label>
+      <select id="til" name="til">
+        <option value="Hasle">Hasle</option>
+        <option value="Gudhjem">Gudhjem</option>
+        <option value="Nexø">Nexø</option>
+      </select>
+      </div>
+    </div>
+
+      <button id="fra-til" formaction="godkend">Find kørelejlighed</button>
+
+        <p id="summary"></p>
+        <div id="results"></div>
+
+    </form>
+
+  </main>
+
+  <footer>Footer</footer>
+</div>
+
+
+
+<div id="tripModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <h3>Trip details</h3>
+
+        <p id="tripDetails"></p>
+
+        <button id="joinRide">Join Ride</button>
+
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
